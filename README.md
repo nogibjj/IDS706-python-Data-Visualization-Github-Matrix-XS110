@@ -34,6 +34,11 @@ Run ` make all` in terminal, I generated `report.md` automatically.
 
 ![Alt text](/image/image6.png)
 
+### 3. Successfully run the workflow
+
+[![CI](https://github.com/nogibjj/IDS706-python-Data-Visualization-Github-Matrix-XS110/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706-python-Data-Visualization-Github-Matrix-XS110/actions/workflows/cicd.yml)
+
+![Alt text](/image/image7.png)
 ## Data Visualization
 
 I analysed the 234 countries' population in 2022, growth rate and Area(km²).
