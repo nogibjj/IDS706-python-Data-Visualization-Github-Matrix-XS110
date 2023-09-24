@@ -10,31 +10,24 @@ I downloaded `word_population.csv` from kaggle and uploaded it into this respori
 
 ## Setup
 
-I used week2 mini project as a template and made the following modifications: 
+I used week3 mini project as a template and made the following modifications: 
 
-### 1. Update requirements.txt:
+### 1. Update cicd.yml:
 ```
-#script
-polars
-pyarrow
-tabulate
+jobs:
+  build:
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+        os : [ubuntu-latest, windows-latest]
+    runs-on: ${{matrix.os}}
 ```
-### 2. Read data
-
-Instead of using pd.read_csv, I use `pl.read_csv` to read `world_population.csv`
-
-
-### 3. Update script.py
-
-I updated the script.py using Polars for descriptive statistics to generate summary statistics (mean, median, standard deviation)
-
-And I also created data visualization.
-
-### 4. Generate report.md
+### 2. Generate report.md
 
 Run ` make all` in terminal, I generated `report.md` automatically.
 
 ![Alt text](/image/image6.png)
+
 ## Data Visualization
 
 I analysed the 234 countries' population in 2022, growth rate and Area(km²).
