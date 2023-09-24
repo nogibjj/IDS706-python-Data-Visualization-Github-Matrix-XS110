@@ -16,11 +16,17 @@ I used week3 mini project as a template and made the following modifications:
 ```
 jobs:
   build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8, 3.9]
-        os : [ubuntu-latest, windows-latest]
-    runs-on: ${{matrix.os}}
+        python-version: [3.7,3.8,3.9,3.10.x,3.11]
+ 
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 ```
 ### 2. Generate report.md
 
